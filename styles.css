@@ -1,134 +1,85 @@
-body {
-    margin: 0;
-    text-align: center;
-    font-family: 'Merriweather', serif;
-    background-color: #EAEAEA;
-}
-
-h1 {
-    margin: 50px auto 0 auto;
-    font-family: 'Sacramento', cursive;
-    font-size: 5.5rem;
-    color: #08D9D6;
-}
-
-h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2.5rem;
-    color: #08D9D6;
-    font-weight: normal;
-    padding-bottom: 10px;
-}
-
-h3 {
-    font-family: 'Montserrat', sans-serif;
-    color: #08D9D6;
-}
-
-a {
-    color: #11999E;
-    font-family: 'Montserrat', sans-serif;
-    margin: 10px 20px;
-    text-decoration: none;
-}
-
-a:hover {
-    color: #eaf6f6;
-}
-
-p {
-    line-height: 2;
-    color: #252A34;
-}
-
-hr {
-    border: dotted #FF2E63 6px;
-    border-bottom: none;
-    width: 7%;
-    margin: 100px auto;
-}
-
-.top-container {
-    background-color: #252A34;
-    position: relative;
-    padding-top: 70px;
-}
-
-.middle-container {
-    margin: 100px 0;
-}
-
-.intro {
-    width: 30%;
-    margin: auto;
-}
-
-.contact-message {
-    width: 40%;
-    margin: 40px auto 60px;
-}
-
-.copyright {
-    color: #eaf6f6;
-    font-size: 0.75rem;
-    padding: 20px 0;
-}
-
-.top-cloud {
-    position: relative;
-    left: 250px;
-}
-
-.bottom-cloud {
-    position: absolute;
-}
-
-.skill-row {
-    width: 50%;
-    margin: 100px auto 100px auto;
-    text-align: left;
-}
-
-.web-development {
-    width: 25%;
-    float: left;
-    margin-right: 30px;
-}
-
-.cpp {
-    width: 25%;
+.row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    margin: 0 -16px;
+  }
+  
+  .col-25 {
+    -ms-flex: 25%; /* IE10 */
+    flex: 25%;
+  }
+  
+  .col-50 {
+    -ms-flex: 50%; /* IE10 */
+    flex: 50%;
+  }
+  
+  .col-75 {
+    -ms-flex: 75%; /* IE10 */
+    flex: 75%;
+  }
+  
+  .col-25,
+  .col-50,
+  .col-75 {
+    padding: 0 16px;
+  }
+  
+  .container {
+    background-color: #f2f2f2;
+    padding: 5px 20px 15px 20px;
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+  }
+  
+  input[type=text] {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  label {
+    margin-bottom: 10px;
+    display: block;
+  }
+  
+  .icon-container {
+    margin-bottom: 20px;
+    padding: 7px 0;
+    font-size: 24px;
+  }
+  
+  .btn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    width: 100%;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 17px;
+  }
+  
+  .btn:hover {
+    background-color: #45a049;
+  }
+  
+  span.price {
     float: right;
-    margin-left: 30px;
-}
-
-.btn {
-    background: #11cdd4;
-    background-image: -webkit-linear-gradient(top, #11cdd4, #11999e);
-    background-image: -moz-linear-gradient(top, #11cdd4, #11999e);
-    background-image: -ms-linear-gradient(top, #11cdd4, #11999e);
-    background-image: -o-linear-gradient(top, #11cdd4, #11999e);
-    background-image: linear-gradient(to bottom, #11cdd4, #11999e);
-    -webkit-border-radius: 8;
-    -moz-border-radius: 8;
-    border-radius: 8px;
-    font-family: 'Montserrat', sans-serif;
-    color: #ffffff;
-    font-size: 20px;
-    padding: 10px 20px 10px 20px;
-    text-decoration: none;
-}
-
-.btn:hover {
-    background: #30e3cb;
-    background-image: -webkit-linear-gradient(top, #30e3cb, #2bc4ad);
-    background-image: -moz-linear-gradient(top, #30e3cb, #2bc4ad);
-    background-image: -ms-linear-gradient(top, #30e3cb, #2bc4ad);
-    background-image: -o-linear-gradient(top, #30e3cb, #2bc4ad);
-    background-image: linear-gradient(to bottom, #30e3cb, #2bc4ad);
-    text-decoration: none;
-}
-
-.bottom-container {
-    background-color: #08D9D6;
-    padding: 50px 0 20px;
-}
+    color: grey;
+  }
+  
+  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (and change the direction - make the "cart" column go on top) */
+  @media (max-width: 800px) {
+    .row {
+      flex-direction: column-reverse;
+    }
+    .col-25 {
+      margin-bottom: 20px;
+    }
+  }
